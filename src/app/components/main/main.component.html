@@ -1,7 +1,11 @@
 <section>
-    @for (pokemon of apiService.allPokemon.slice(0, numberOfPokemon); track pokemon.name) {
+    @for (pokemon of apiService.allPokemon; track pokemon.name) {
         <div>
             <p>{{pokemon.name}}</p>
+            <p>{{pokemon.id}}</p>
+            <img src="{{pokemon.sprites.other.dream_world.front_default}}" alt="">
         </div>
     }
+
+    <button (click)="addMorePokemon()">add more</button>
 </section>

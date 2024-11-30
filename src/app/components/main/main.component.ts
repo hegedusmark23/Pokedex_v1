@@ -12,14 +12,14 @@ import { HttpClient } from '@angular/common/http';
 export class MainComponent implements OnInit{
   constructor(private http: HttpClient) { }
   apiService = inject(ApiService);
-  numberOfPokemon: number = 20;
 
 ngOnInit(): void {
    this.apiService.getApi();
 }
 
 addMorePokemon() {
-  this.numberOfPokemon += 20;
-  console.log(this.numberOfPokemon);
+  this.apiService.numberOfPokemon += 20;
+  console.log(this.apiService.numberOfPokemon);
+  this.apiService.getApi();
 }
 }

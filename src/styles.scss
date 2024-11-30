@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: pokemonGb;
+    src: url(./assets/fonts/PokemonGb-RAeo.ttf) format("truetype");
+}
+
+p::first-letter {
+    text-transform: capitalize;
+}
+
+body{
+    font-family: pokemonGb;
+    margin: 0;
+}
