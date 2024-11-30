@@ -1,0 +1,7 @@
+<section>
+    @for (pokemon of apiService.allPokemon.slice(0, numberOfPokemon); track pokemon.name) {
+        <div>
+            <p>{{pokemon.name}}</p>
+        </div>
+    }
+</section>
